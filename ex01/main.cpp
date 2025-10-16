@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:25:25 by nseon             #+#    #+#             */
-/*   Updated: 2025/10/14 17:24:47 by nseon            ###   ########.fr       */
+/*   Updated: 2025/10/16 11:03:03 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ Contact create_contact()
 	std::cout << "Darkest secret:";
 	std::getline(std::cin, input);
 	contact.setDarkest_secret(input);
+	return (contact);
 }
 
 int	main()
@@ -46,7 +47,9 @@ int	main()
 	{
 		std::getline(std::cin, input);
 		if (input == "ADD")
-			
+			phonebook.add_contact(create_contact());
+		if (input == "SEARCH")
+			phonebook.show_contacts();
 	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 #    By: nseon <nseon@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 10:54:16 by nseon             #+#    #+#              #
-#    Updated: 2025/10/14 15:36:59 by nseon            ###   ########.fr        #
+#    Updated: 2025/10/16 10:05:51 by nseon            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ SRC			=	Phonebook.cpp \
 # --------------CONFIGS-------------- #
 
 CC			=	c++
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -g3
 CPPFLAGS	=	-MMD -MP $(addprefix -I, $(INCLUDES))
 
 LDFLAGS		+=	$(addprefix -L, $(dir $(LIB_PATH)))
