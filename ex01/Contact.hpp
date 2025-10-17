@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:58:38 by nseon             #+#    #+#             */
-/*   Updated: 2025/10/16 10:28:48 by nseon            ###   ########.fr       */
+/*   Updated: 2025/10/17 09:53:27 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ class Contact {
 		void setPhone_number(const std::string &str);
 		void setDarkest_secret(const std::string &str);
 		void show();
+		std::string getFirst_name();
+		std::string getLast_name();
+		std::string getNickname();
+		std::string getPhone_number();
+		std::string getDarkest_secret();
 };
 
 #endif

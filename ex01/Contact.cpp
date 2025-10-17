@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:32:55 by nseon             #+#    #+#             */
-/*   Updated: 2025/10/16 11:09:43 by nseon            ###   ########.fr       */
+/*   Updated: 2025/10/17 10:16:16 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,27 @@ void Contact::setDarkest_secret(const std::string &str)
 
 /* --------------GET-------------- */
 
-void
+std::string Contact::getFirst_name()
+{
+	return (_first_name);
+}
+
+std::string Contact::getLast_name()
+{
+	return (_last_name);
+}
+
+std::string Contact::getNickname()
+{
+	return (_nickname);
+}
+
+std::string Contact::getPhone_number()
+{
+	return (_phone_number);
+}
+
+std::string Contact::getDarkest_secret()
+{
+	return (_darkest_secret);
+}
