@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:47:51 by nseon             #+#    #+#             */
-/*   Updated: 2025/10/17 16:14:26 by nseon            ###   ########.fr       */
+/*   Updated: 2025/10/20 11:50:07 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,16 @@ std::string Phonebook::resize(std::string str)
 
 void Phonebook::add_contact(Contact contact)
 {
-	if (_nb_contacts < 8)	
+	if (_nb_contacts < 8)
 	{
 		_contacts[_nb_contacts] = contact;
 		_nb_contacts++;
 	}
 	else
 	{
-		for (int8_t i = 0; i < 8; i++)
+		for (int8_t i = 0; i < 7; i++)
 			_contacts[i] = _contacts[i + 1];
-		_contacts[_nb_contacts] = contact;
+		_contacts[7] = contact;
 	}
 }
 
