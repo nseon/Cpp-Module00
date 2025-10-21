@@ -6,11 +6,11 @@
 #    By: nseon <nseon@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 10:54:16 by nseon             #+#    #+#              #
-#    Updated: 2025/10/14 14:35:25 by nseon            ###   ########.fr        #
+#    Updated: 2025/10/21 12:35:13 by nseon            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		=	megaphone
+NAME 		=	account
 
 # ---------------FILES--------------- #
 
@@ -24,12 +24,13 @@ DEP			=	$(patsubst %.cpp, $(MAKE_DIR)%.d, $(SRC))
 
 # ---------------MAIN---------------- #
 
-SRC			=	megaphone.cpp \
+SRC			=	tests.cpp \
+				Account.cpp \
 
 # --------------CONFIGS-------------- #
 
 CC			=	c++
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 CPPFLAGS	=	-MMD -MP $(addprefix -I, $(INCLUDES))
 
 LDFLAGS		+=	$(addprefix -L, $(dir $(LIB_PATH)))
