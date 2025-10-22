@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:47:51 by nseon             #+#    #+#             */
-/*   Updated: 2025/10/20 11:50:07 by nseon            ###   ########.fr       */
+/*   Updated: 2025/10/22 08:59:26 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void Phonebook::add_contact(Contact contact)
 	}
 	else
 	{
-		for (int8_t i = 0; i < 7; i++)
+		for (int i = 0; i < 7; i++)
 			_contacts[i] = _contacts[i + 1];
 		_contacts[7] = contact;
 	}
@@ -65,4 +65,11 @@ void Phonebook::show_contacts()
 int	Phonebook::getNb_contacts()
 {
 	return (_nb_contacts);
+}
+
+/* --------------SET-------------- */
+
+void Phonebook::setNb_contacts(int nb)
+{
+	_nb_contacts = nb;
 }

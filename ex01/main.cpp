@@ -6,12 +6,13 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:25:25 by nseon             #+#    #+#             */
-/*   Updated: 2025/10/20 14:39:28 by nseon            ###   ########.fr       */
+/*   Updated: 2025/10/22 08:58:49 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
+#include <cstdlib>
 
 #include "Phonebook.hpp"
 
@@ -79,6 +80,7 @@ int	main()
 	Phonebook	phonebook;
 	std::string	input;
 
+	phonebook.setNb_contacts(0);
 	while (!std::cin.eof() && input.compare("EXIT"))
 	{
 		std::getline(std::cin, input);
