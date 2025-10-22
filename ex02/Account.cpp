@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 15:37:54 by nseon             #+#    #+#             */
-/*   Updated: 2025/10/21 13:53:52 by nseon            ###   ########.fr       */
+/*   Updated: 2025/10/22 11:16:47 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	Account::_totalNbWithdrawals = 0;
 
 Account::Account( int initial_deposit )
 {
+	_nbDeposits = 0;
+	_nbWithdrawals = 0;
 	_amount = initial_deposit;
 	_totalAmount += _amount;
 	_accountIndex = _nbAccounts;
