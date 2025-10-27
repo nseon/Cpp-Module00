@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:47:51 by nseon             #+#    #+#             */
-/*   Updated: 2025/10/22 08:59:26 by nseon            ###   ########.fr       */
+/*   Updated: 2025/10/27 10:52:49 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "Phonebook.hpp"
 
-std::string Phonebook::resize(std::string str)
+static std::string resize(std::string str)
 {
 	std::string	new_str;
 

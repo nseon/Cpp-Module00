@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:25:25 by nseon             #+#    #+#             */
-/*   Updated: 2025/10/22 08:58:49 by nseon            ###   ########.fr       */
+/*   Updated: 2025/10/27 10:58:19 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,31 +28,30 @@ int	get_input(std::string msg, std::string &input)
 	return (0);
 }
 
-Contact create_contact()
+int create_contact(Contact &contact)
 {
-	Contact contact;
 	std::string	input;
 
 	if (get_input("First name: ", input) == -1)
-		exit(EXIT_FAILURE);
+		return (-1);
 	contact.setFirst_name(input);
 	input.clear();
 	if (get_input("Last name: ", input) == -1)
-		exit(EXIT_FAILURE);
+		return (-1);
 	contact.setLast_name(input);
 	input.clear();
 	if (get_input("Nickname: ", input) == -1)
-		exit(EXIT_FAILURE);
+		return (-1);
 	contact.setNickname(input);
 	input.clear();
 	if (get_input("Phone number: ", input) == -1)
-		exit(EXIT_FAILURE);
+		return (-1);
 	contact.setPhone_number(input);
 	input.clear();
 	if (get_input("Darkest secret: ", input) == -1)
-		exit(EXIT_FAILURE);
+		return (-1);
 	contact.setDarkest_secret(input);
-	return (contact);
+	return (0);
 }
 
 void	search(Phonebook &phonebook)
@@ -79,13 +78,18 @@ int	main()
 {
 	Phonebook	phonebook;
 	std::string	input;
+	Contact		new_contact;
 
 	phonebook.setNb_contacts(0);
 	while (!std::cin.eof() && input.compare("EXIT"))
 	{
 		std::getline(std::cin, input);
 		if (input == "ADD")
-			phonebook.add_contact(create_contact());
+		{
+			if (create_contact(new_contact) == -1)
+				return (-1);
+			phonebook.add_contact(new_contact);
+		}
 		if (input == "SEARCH")
 		{
 			phonebook.show_contacts();
